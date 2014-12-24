@@ -12,7 +12,7 @@
       "name": "Lars Meyer",
       "email": "lme@orgadata.com"
     }
-  ]
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/lmeyer2/grunt-mssql.git"
