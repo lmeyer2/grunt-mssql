@@ -40,6 +40,6 @@
     "gruntplugin"
   ],
   "dependencies": {
-    "tedious": "~0.1.5"
+    "tedious": "~1.8.0"
   }
 }

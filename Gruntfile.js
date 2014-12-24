@@ -35,7 +35,7 @@ module.exports = function(grunt) {
                 server: '192.168.56.110',
                 userName: 'ps-ci',
                 password: 'ps-ci'
-        },  
+        },
         query: "RESTORE DATABASE PS FROM DATABASE_SNAPSHOT = 'PS_BeforeIntegrationTest';"
       }
     },

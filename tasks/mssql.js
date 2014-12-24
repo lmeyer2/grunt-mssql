@@ -3,25 +3,29 @@
 module.exports = function(grunt) {
   grunt.registerMultiTask('mssql', 'query to be excuted against a ms sql server', function() {
       // Merge task-specific and/or target-specific options with these defaults.
-      var options = this.options({
+      var config = this.options({
         server: '',
         userName: '',
-        password: ''
+        password: '',
+        options: {
+          instanceName: ''
+        }
       });
 
       var Connection = require('tedious').Connection;
       var Request = require('tedious').Request;
 
-      var connection = new Connection({
-          server: options.server,
-          userName: options.userName,
-          password: options.password
+      var connection = new Connection(config);
+
+      connection.on('debug', function(text) {
+        console.log(text);
       });
 
       var query = this.data.query;
       var done = this.async();
-      connection.on('connect', function() {
-          var request = new Request(query, function(err, rowCount) {
+
+      connection.on('connect', function(err) {
+        var request = new Request(query, function(err, rowCount) {
               connection.close();
               if (err) {
                 grunt.log.error(err);
