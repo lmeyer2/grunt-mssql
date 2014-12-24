@@ -7,17 +7,23 @@
     "name": "Dung Phung",
     "email": "dkphung@ucdavis.edu"
   },
+  "contributors": [
+    {
+      "name": "Lars Meyer",
+      "email": "lme@orgadata.com"
+    }
+  ]
   "repository": {
     "type": "git",
-    "url": "git://github.com/phung/grunt-mssql.git"
+    "url": "git://github.com/lmeyer2/grunt-mssql.git"
   },
   "bugs": {
-    "url": "https://github.com/phung/grunt-mssql/issues"
+    "url": "https://github.com/lmeyer2/grunt-mssql/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/phung/grunt-mssql/blob/master/LICENSE-MIT"
+      "url": "https://github.com/lmeyer2/grunt-mssql/blob/master/LICENSE-MIT"
     }
   ],
   "main": "Gruntfile.js",
